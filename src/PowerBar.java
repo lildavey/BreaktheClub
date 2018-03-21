@@ -14,3 +14,11 @@ public class PowerBar extends Actor {
 
     }
 }
+class Bar extends Actor
+{
+
+    @Override
+    public void act() {
+
+    }
+}
