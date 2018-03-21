@@ -1,10 +1,11 @@
 import mayflower.Actor;
 
 public class PowerBar extends Actor {
-    private int percent, speed;
-    public PowerBar(int xCoord, int yCoord)
+    private int speed,percent;
+
+    public PowerBar(int newx,int newy)
     {
-        setLocation(xCoord,yCoord);
+        setLocation(newx,newy);
     }
 
     @Override
