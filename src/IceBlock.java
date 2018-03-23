@@ -1,6 +1,7 @@
 import mayflower.Actor;
 
 import mayflower.Mayflower;
+import mayflower.MayflowerImage;
 import mayflower.World;
 
 import java.util.ArrayList;
@@ -14,7 +15,9 @@ public class IceBlock extends Actor {
     public IceBlock(int height, int health ){
         this.height = height; this.health = health;
 
-        this.setImage("img/Ice_Block.png");
+        MayflowerImage img = new MayflowerImage("img/first_cube.png");
+
+        setImage(img);
 
 
     }
