@@ -11,9 +11,9 @@ public class IceBlock extends Actor {
     private Mayflower mayflower;
     public int height, health;
 
-    public IceBlock(int height, int x, int y, int health ){
+    public IceBlock(int height, int health ){
         this.height = height; this.health = health;
-        this.setLocation(x,y);
+
         this.setImage("img/Ice_Block.png");
 
 
@@ -23,6 +23,9 @@ public class IceBlock extends Actor {
     public void act() {
 
     }
+/*    public updateHealth(){
+        
+    }*/
 
     public int getHealth() {
         return health;
@@ -31,4 +34,6 @@ public class IceBlock extends Actor {
     public int getHeight() {
         return height;
     }
+
+
 }
