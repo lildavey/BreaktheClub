@@ -31,11 +31,12 @@ public class IceBlock extends Actor {
 
         
 
-
+/*
     public int getHealth() {
         updateHealth();
          return health;
     }
+    */
 
     public int getHeight() {
         return height;

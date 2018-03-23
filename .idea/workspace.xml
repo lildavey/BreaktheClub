@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1fe6b09e-3e94-4899-aa92-05e434a80a15" name="Default" comment="etsdf">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BreaktheClub/GameWorld.class" afterPath="$PROJECT_DIR$/out/production/BreaktheClub/GameWorld.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BreaktheClub/IceBlock.class" afterPath="$PROJECT_DIR$/out/production/BreaktheClub/IceBlock.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BreaktheClub/Runner.class" afterPath="$PROJECT_DIR$/out/production/BreaktheClub/Runner.class" />
+    <list default="true" id="1fe6b09e-3e94-4899-aa92-05e434a80a15" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameWorld.java" afterPath="$PROJECT_DIR$/src/GameWorld.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/IceBlock.java" afterPath="$PROJECT_DIR$/src/IceBlock.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Runner.java" afterPath="$PROJECT_DIR$/src/Runner.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,32 +20,33 @@
         <entry file="file://$PROJECT_DIR$/src/PowerBar.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="391">
-              <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IceBlock.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/IceBlock.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+              <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
               <folding>
-                <marker date="1521833151033" expanded="false" signature="588:599" ph=" { " />
-                <marker date="1521833151033" expanded="false" signature="613:619" ph=" }" />
-                <marker date="1521833151033" expanded="false" signature="647:658" ph=" { " />
-                <marker date="1521833151033" expanded="false" signature="672:678" ph=" }" />
+                <marker date="1521833624211" expanded="true" signature="884:890" ph="{}" />
+                <marker date="1521833624211" expanded="true" signature="884:892" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameWorld.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="IceBlock.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/IceBlock.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="38" column="6" lean-forward="false" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
+              <folding>
+                <marker date="1521833764132" expanded="false" signature="757:768" ph=" { " />
+                <marker date="1521833764132" expanded="false" signature="782:788" ph=" }" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameWorld.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GameWorld.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="51" lean-forward="false" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
+            <state relative-caret-position="170">
+              <caret line="10" column="36" lean-forward="true" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -89,9 +86,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/IceBlock.java" />
         <option value="$PROJECT_DIR$/src/Runner.java" />
         <option value="$PROJECT_DIR$/src/GameWorld.java" />
+        <option value="$PROJECT_DIR$/src/IceBlock.java" />
       </list>
     </option>
   </component>
@@ -285,7 +282,21 @@
       <option name="project" value="LOCAL" />
       <updated>1521828945824</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="etsdf">
+      <created>1521833616642</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1521833616642</updated>
+    </task>
+    <task id="LOCAL-00003" summary="etsdf">
+      <created>1521833667460</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1521833667460</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -294,7 +305,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944915" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -355,7 +366,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
+          <folding>
+            <marker date="1521833624211" expanded="true" signature="884:890" ph="{}" />
+            <marker date="1521833624211" expanded="true" signature="884:892" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -364,10 +378,8 @@
         <state relative-caret-position="323">
           <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
-            <marker date="1521833151033" expanded="false" signature="588:599" ph=" { " />
-            <marker date="1521833151033" expanded="false" signature="613:619" ph=" }" />
-            <marker date="1521833151033" expanded="false" signature="647:658" ph=" { " />
-            <marker date="1521833151033" expanded="false" signature="672:678" ph=" }" />
+            <marker date="1521833764132" expanded="false" signature="757:768" ph=" { " />
+            <marker date="1521833764132" expanded="false" signature="782:788" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -376,7 +388,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1521833624211" expanded="true" signature="884:890" ph="{}" />
+            <marker date="1521833624211" expanded="true" signature="884:892" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -397,10 +412,8 @@
         <state relative-caret-position="323">
           <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
-            <marker date="1521833151033" expanded="false" signature="588:599" ph=" { " />
-            <marker date="1521833151033" expanded="false" signature="613:619" ph=" }" />
-            <marker date="1521833151033" expanded="false" signature="647:658" ph=" { " />
-            <marker date="1521833151033" expanded="false" signature="672:678" ph=" }" />
+            <marker date="1521833764132" expanded="false" signature="757:768" ph=" { " />
+            <marker date="1521833764132" expanded="false" signature="782:788" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -417,7 +430,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-          <folding />
+          <folding>
+            <marker date="1521833624211" expanded="true" signature="884:890" ph="{}" />
+            <marker date="1521833624211" expanded="true" signature="884:892" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -436,10 +452,8 @@
         <state relative-caret-position="153">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
-            <marker date="1521833151033" expanded="false" signature="588:599" ph=" { " />
-            <marker date="1521833151033" expanded="false" signature="613:619" ph=" }" />
-            <marker date="1521833151033" expanded="false" signature="647:658" ph=" { " />
-            <marker date="1521833151033" expanded="false" signature="672:678" ph=" }" />
+            <marker date="1521833764132" expanded="false" signature="757:768" ph=" { " />
+            <marker date="1521833764132" expanded="false" signature="782:788" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -457,10 +471,8 @@
         <state relative-caret-position="408">
           <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding>
-            <marker date="1521833151033" expanded="false" signature="588:599" ph=" { " />
-            <marker date="1521833151033" expanded="false" signature="613:619" ph=" }" />
-            <marker date="1521833151033" expanded="false" signature="647:658" ph=" { " />
-            <marker date="1521833151033" expanded="false" signature="672:678" ph=" }" />
+            <marker date="1521833764132" expanded="false" signature="757:768" ph=" { " />
+            <marker date="1521833764132" expanded="false" signature="782:788" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -486,20 +498,10 @@
     <entry file="file://$PROJECT_DIR$/src/PowerBar.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
-          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IceBlock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+          <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
           <folding>
-            <marker date="1521833151033" expanded="false" signature="588:599" ph=" { " />
-            <marker date="1521833151033" expanded="false" signature="613:619" ph=" }" />
-            <marker date="1521833151033" expanded="false" signature="647:658" ph=" { " />
-            <marker date="1521833151033" expanded="false" signature="672:678" ph=" }" />
+            <marker date="1521833624211" expanded="true" signature="884:890" ph="{}" />
+            <marker date="1521833624211" expanded="true" signature="884:892" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -518,9 +520,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GameWorld.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="51" lean-forward="false" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
+        <state relative-caret-position="170">
+          <caret line="10" column="36" lean-forward="true" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IceBlock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="38" column="6" lean-forward="false" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
+          <folding>
+            <marker date="1521833764132" expanded="false" signature="757:768" ph=" { " />
+            <marker date="1521833764132" expanded="false" signature="782:788" ph=" }" />
+          </folding>
         </state>
       </provider>
     </entry>
