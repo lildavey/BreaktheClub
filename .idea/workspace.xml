@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fe6b09e-3e94-4899-aa92-05e434a80a15" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/Thumbs.db" afterPath="$PROJECT_DIR$/img/Thumbs.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameWorld.java" afterPath="$PROJECT_DIR$/src/GameWorld.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/IceBlock.java" afterPath="$PROJECT_DIR$/src/IceBlock.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -19,8 +19,8 @@
       <file leaf-file-name="IceBlock.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/IceBlock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="26" column="8" lean-forward="false" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+            <state relative-caret-position="177">
+              <caret line="14" column="78" lean-forward="false" selection-start-line="14" selection-start-column="78" selection-end-line="14" selection-end-column="78" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -374,8 +374,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/IceBlock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="26" column="8" lean-forward="false" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+        <state relative-caret-position="177">
+          <caret line="14" column="78" lean-forward="false" selection-start-line="14" selection-start-column="78" selection-end-line="14" selection-end-column="78" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
