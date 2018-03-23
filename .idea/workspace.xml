@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fe6b09e-3e94-4899-aa92-05e434a80a15" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/Thumbs.db" afterPath="$PROJECT_DIR$/img/Thumbs.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/IceBlock.java" afterPath="$PROJECT_DIR$/src/IceBlock.java" />
     </list>
@@ -19,10 +18,13 @@
       <file leaf-file-name="IceBlock.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/IceBlock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="14" column="78" lean-forward="false" selection-start-line="14" selection-start-column="78" selection-end-line="14" selection-end-column="78" />
+            <state relative-caret-position="382">
+              <caret line="27" column="15" lean-forward="true" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#getHealth#0;class#IceBlock#0" expanded="false" />
+                <marker date="1521829947003" expanded="false" signature="740:751" ph=" { " />
+                <marker date="1521829947003" expanded="false" signature="765:771" ph=" }" />
               </folding>
             </state>
           </provider>
@@ -43,9 +45,12 @@
       <file leaf-file-name="PowerBar.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PowerBar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="6" lean-forward="false" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-              <folding />
+            <state relative-caret-position="0">
+              <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+              <folding>
+                <marker date="1521829993864" expanded="true" signature="884:890" ph="{}" />
+                <marker date="1521829993864" expanded="true" signature="884:892" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -324,6 +329,9 @@
           <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#getHealth#0;class#IceBlock#0" expanded="false" />
+            <marker date="1521829947003" expanded="false" signature="740:751" ph=" { " />
+            <marker date="1521829947003" expanded="false" signature="765:771" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -346,19 +354,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PowerBar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="6" lean-forward="false" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GameWorld.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="38" lean-forward="false" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PowerBar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+          <folding>
+            <marker date="1521829993864" expanded="true" signature="884:890" ph="{}" />
+            <marker date="1521829993864" expanded="true" signature="884:892" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -374,10 +385,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/IceBlock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="14" column="78" lean-forward="false" selection-start-line="14" selection-start-column="78" selection-end-line="14" selection-end-column="78" />
+        <state relative-caret-position="382">
+          <caret line="27" column="15" lean-forward="true" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#getHealth#0;class#IceBlock#0" expanded="false" />
+            <marker date="1521829947003" expanded="false" signature="740:751" ph=" { " />
+            <marker date="1521829947003" expanded="false" signature="765:771" ph=" }" />
           </folding>
         </state>
       </provider>
