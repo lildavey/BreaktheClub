@@ -23,6 +23,9 @@ public class IceBlock extends Actor {
     public void act() {
 
     }
+    public updateHealth(){
+        
+    }
 
     public int getHealth() {
         return health;
