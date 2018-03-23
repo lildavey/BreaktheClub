@@ -1,10 +1,9 @@
 import mayflower.Actor;
 
 public class PowerBar extends Actor {
-    public PowerBar(int newx,int newy)
+    public PowerBar()
     {
-        setLocation(newx,newy);
-        setImage("barBG.jpg");
+        setImage("img/barBG.jpg");
     }
 
     @Override
@@ -18,12 +17,12 @@ class Bar extends Actor
     private PowerBar thisBar;
     public Bar(PowerBar tempBar)
     {
-        speedVar = 1;
+        speedVar = 5;
         percent  = 0;
         thisBar = tempBar;
-        setLocation(thisBar.getX(), thisBar.getY()-8);
-        setImage("bar.jpg");
-        setRotation(90);
+        //setLocation(thisBar.getX(), thisBar.getY()-8);
+        setImage("img/bar.jpg");
+        setRotation(0);
     }
 
     public int getPercent()
@@ -35,8 +34,8 @@ class Bar extends Actor
     @Override
     public void act() {
         this.getPercent();
-        if(getX() == thisBar.getX()) setRotation(90);
-        else if(getX()+15 == thisBar.getX()+400) setRotation(270);
+        if(getX() == thisBar.getX()) setRotation(0);
+        else if(getX()+getImage().getWidth() == thisBar.getX()+thisBar.getImage().getWidth()) setRotation(180);
         move(speedVar);
     }
 }
