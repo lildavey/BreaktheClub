@@ -21,7 +21,7 @@ class Bar extends Actor
         percent  = 0;
         thisBar = tempBar;
         //setLocation(thisBar.getX(), thisBar.getY()-8);
-        setImage("img/bar.jpg");
+        setImage("img/puff.png");
         setRotation(0);
     }
 
