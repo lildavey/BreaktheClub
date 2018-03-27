@@ -15,9 +15,10 @@ class Bar extends Actor
 {
     private int speedVar, percent;
     private PowerBar thisBar;
+    private boolean isRunning;
     public Bar(PowerBar tempBar)
     {
-        speedVar = 5;
+        speedVar = 0;
         percent  = 0;
         thisBar = tempBar;
         //setLocation(thisBar.getX(), thisBar.getY()-8);
@@ -29,6 +30,11 @@ class Bar extends Actor
     {
         int temp = getCenterX() - thisBar.getX(); percent = temp/4;
         return percent;
+    }
+
+    public void setSpeedVar(int newSpeed)
+    {
+        speedVar = newSpeed;
     }
 
     @Override
