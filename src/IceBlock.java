@@ -16,7 +16,7 @@ public class IceBlock extends Actor {
     public IceBlock(int height, int health  ){
         this.height = height; this.health = health;// this.row = row; this.col = col; //this.iceblocks = iceblocks;
 
-        MayflowerImage img = new MayflowerImage("img/first_cube.png");
+        MayflowerImage img = new MayflowerImage("img/Ice-temp.png");
 
         setImage(img);
 
