@@ -1,9 +1,19 @@
 import mayflower.Mayflower;
+
+import java.util.ArrayList;
+
+import mayflower.Actor;
+
+import mayflower.Mayflower;
 import mayflower.World;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 public class GameWorld extends World {
 
     public IceBlock[][] iceBlocks;
+
     public GameWorld() {
         setBackground("img/tileMap.png");
         iceBlocks = new IceBlock[9][9];
@@ -28,56 +38,69 @@ public class GameWorld extends World {
     }
 
     @Override
-    public void act(){
+    public void act() {
+        //if(Mayflower.mouseClicked(IceBlock.class))
+        ArrayList<IceBlock> temp = new ArrayList<>();
+        for (IceBlock actor : getObjects(IceBlock.class)) {
+            if(Mayflower.mouseClicked(actor))temp.add(actor);
+        }
+
+        if(!temp.isEmpty()) {
+            IceBlock highest = temp.get(0);
+            for (IceBlock Icetemp : temp) {
+                if (Icetemp.getY() > highest.getY()) highest = Icetemp;
+            }
+            highest.setImage("img/first_cube - Copy.png");
+        }
+
+
+
 
     }
-    public void IceBlockCalc(){
-        for(int r = iceBlocks.length-1; r >0; r--)
-            for(int c = iceBlocks[r].length-1; c>0; c--){
+
+    public void IceBlockCalc() {
+        for (int r = iceBlocks.length - 1; r > 0; r--)
+            for (int c = iceBlocks[r].length - 1; c > 0; c--) {
                 int iceBlockGet = iceBlocks[r][c].getHeight();
-                Integer[][] matrix =  {
-                        { 0, 0, 0 },
-                        { 0, 0, 0 },
-                        { 0, 0, 0 }
-                       };
+                Integer[][] matrix = {
+                        {0, 0, 0},
+                        {0, 0, 0},
+                        {0, 0, 0}
+                };
 
                 try {
                     matrix[1][1] = iceBlocks[r][c].getHeight();
-                    matrix[0][1] = iceBlocks[r-1][c].getHeight();
-                    matrix[2][1] =iceBlocks[r+1][c].getHeight();
-                    matrix[1][0] = iceBlocks[r][c-1].getHeight();
-                    matrix[1][2] = iceBlocks[r][c+1].getHeight();
-                    matrix[2][0] = iceBlocks[r+1][c-1].getHeight();
-                    matrix[2][2] =iceBlocks[r+1][c+1].getHeight();
-                    matrix[0][0] = iceBlocks[r-1][c-1].getHeight();
-                    matrix[0][2] = iceBlocks[r-1][c+1].getHeight();
+                    matrix[0][1] = iceBlocks[r - 1][c].getHeight();
+                    matrix[2][1] = iceBlocks[r + 1][c].getHeight();
+                    matrix[1][0] = iceBlocks[r][c - 1].getHeight();
+                    matrix[1][2] = iceBlocks[r][c + 1].getHeight();
+                    matrix[2][0] = iceBlocks[r + 1][c - 1].getHeight();
+                    matrix[2][2] = iceBlocks[r + 1][c + 1].getHeight();
+                    matrix[0][0] = iceBlocks[r - 1][c - 1].getHeight();
+                    matrix[0][2] = iceBlocks[r - 1][c + 1].getHeight();
 
-                }
-                catch(Exception e){
-                   // e.printStackTrace();
+                } catch (Exception e) {
+                    // e.printStackTrace();
                 }
                 Integer[][] a = matrix;
-                int x=a[0][0]*((a[1][1]*a[2][2])-(a[2][1]*a[1][2]));
-                int y=-a[0][1]*((a[0][1]*a[2][2])-(a[2][0]*a[1][2]));
-                int z=a[0][2]*((a[1][0]*a[2][1])-(a[1][1]*a[2][0]));
+                int x = a[0][0] * ((a[1][1] * a[2][2]) - (a[2][1] * a[1][2]));
+                int y = -a[0][1] * ((a[0][1] * a[2][2]) - (a[2][0] * a[1][2]));
+                int z = a[0][2] * ((a[1][0] * a[2][1]) - (a[1][1] * a[2][0]));
 
-                int det=x+y+z;
+                int det = x + y + z;
 
-                int add =0;
-               for(int i = matrix.length-1; i>0; i--)
-                   for(int j = matrix[i].length-1; j>0; j--){
-                   add += matrix[i][j];
-                   }
-                   int avg = add/9;
+                int add = 0;
+                for (int i = matrix.length - 1; i > 0; i--)
+                    for (int j = matrix[i].length - 1; j > 0; j--) {
+                        add += matrix[i][j];
+                    }
+                int avg = add / 9;
 
-                det= det*avg;
+                det = det * avg;
                 System.out.println(det);
 
 
-
-
             }
-
     }
 
 }
