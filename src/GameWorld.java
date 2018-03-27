@@ -1,8 +1,14 @@
+import mayflower.Actor;
+import mayflower.Mayflower;
 import mayflower.World;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 public class GameWorld extends World {
 
     public IceBlock[][] iceBlocks;
+
     public GameWorld() {
         setBackground("img/tileMap.png");
         iceBlocks = new IceBlock[9][9];
@@ -24,16 +30,33 @@ public class GameWorld extends World {
     }
 
     @Override
-    public void act(){
+    public void act() {
+        //if(Mayflower.mouseClicked(IceBlock.class))
+        ArrayList<IceBlock> temp = new ArrayList<>();
+        for (IceBlock actor : getObjects(IceBlock.class)) {
+            if(Mayflower.mouseClicked(actor))temp.add(actor);
+        }
+
+        if(!temp.isEmpty()) {
+            IceBlock highest = temp.get(0);
+            for (IceBlock Icetemp : temp) {
+                if (Icetemp.getY() > highest.getY()) highest = Icetemp;
+            }
+            highest.setImage("img/first_cube - Copy.png");
+        }
+
+
+
 
     }
-    public void IceBlockCalc(){
-        for(int r = iceBlocks.length; r >0; r--)
-            for(int c = iceBlocks[r].length; c>0; c--){
+
+    public void IceBlockCalc() {
+        for (int r = iceBlocks.length; r > 0; r--)
+            for (int c = iceBlocks[r].length; c > 0; c--) {
                 int iceBlockGet = iceBlocks[r][c].getHeight();
                 int heightRback = 0;
-                if(r<iceBlocks[r].length)
-                    heightRback = iceBlocks[r-1][c].getHeight();
+                if (r < iceBlocks[r].length)
+                    heightRback = iceBlocks[r - 1][c].getHeight();
             }
 
     }
