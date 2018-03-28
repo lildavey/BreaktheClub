@@ -30,7 +30,7 @@ class Bar extends Actor
     }
     public void startMover() {
 
-        speedVar = 3;
+        speedVar = 5;
     }
 
  public void moveBlock(IceBlock drop){
@@ -39,10 +39,10 @@ class Bar extends Actor
             if(Mayflower.isKeyPressed(Keyboard.KEY_SPACE))
             {
                 setSpeedVar(0);
-                drop.setLocation(drop.getX(), drop.getY()+this.getPercent());
+                drop.setLocation(drop.getX(), drop.getY()+this.getPercent()/2);
                // drop.
                 //isRunning = false;
-                drop = null;
+                this.drop = null;
 
             }
 
