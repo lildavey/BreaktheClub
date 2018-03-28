@@ -31,41 +31,37 @@ public class GameWorld extends World {
 
             }
 
-            iceBlocks[0][1].setImage("img/first_cube - Copy.png");
+        iceBlocks[0][1].setImage("img/first_cube - Copy.png");
         //IceBlockCalc();
     }
 
     @Override
     public void act() {
-       // if(Mayflower.mouseClicked(IceBlock.class))
+        // if(Mayflower.mouseClicked(IceBlock.class))
 
         ArrayList<IceBlock> temp = new ArrayList<>();
         for (IceBlock actor : getObjects(IceBlock.class)) {
-            if(Mayflower.mouseClicked(actor)) {
+            if (Mayflower.mouseClicked(actor)) {
                 temp.add(actor);
 
             }
         }
 
-        if(!temp.isEmpty()) {
+        if (!temp.isEmpty()) {
             IceBlock highest = temp.get(0);
 
 
-           //System.out.println(i);
+            //System.out.println(i);
 
             for (IceBlock Icetemp : temp) {
                 if (Icetemp.getY() > highest.getY()) highest = Icetemp;
             }
             highest.setImage("img/first_cube - Copy.png");
             puff.startMover();
-            puff.moveBlock(highest,this);
-
-
+            puff.moveBlock(highest, this);
 
 
         }
-
-
 
 
     }
@@ -73,8 +69,8 @@ public class GameWorld extends World {
     public void IceBlockCalc(IceBlock calc) {
         for (int r = iceBlocks.length - 1; r > 0; r--)
             for (int c = iceBlocks[r].length - 1; c > 0; c--) {
-            if(iceBlocks[r][c]!= calc)
-                continue;
+                if (iceBlocks[r][c] != calc)
+                    continue;
                 int iceBlockGet = iceBlocks[r][c].getHeight();
                 Integer[][] matrix = {
                         {0, 0, 0},
@@ -107,19 +103,44 @@ public class GameWorld extends World {
                 int add = 0;
                 for (int i = matrix.length - 1; i > 0; i--)
                     for (int j = matrix[i].length - 1; j > 0; j--) {
-                        add += matrix[i][j] * (iceBlocks[i][j].getHealth())*.2;
+                        if (Math.abs(det * .001) > .3)
+                            add += matrix[i][j] * (iceBlocks[i][j].getHealth() * Math.abs(det * .001));
+                        else {
+                            add += matrix[i][j] * (iceBlocks[i][j].getHealth() * .2);
+                        }
                     }
                 int avg = add / 9;
 
                 det = det * avg;
 
-                System.out.println(avg);
-                iceBlocks[r][c].setLocation(iceBlocks[r][c].getX(), iceBlocks[r][c].getY()+(avg));
-
-
-
+                //System.out.println(avg);
+                iceBlocks[r][c].setLocation(iceBlocks[r][c].getX(), iceBlocks[r][c].getY() + (avg));
+Double dropScore = 0.0;
+                if (Math.abs(det * .001) > .3)
+                    dropScore = (10 - iceBlocks[r][c].getHealth()) * Math.abs(det * .001);
+                else {
+                    dropScore =10 - iceBlocks[r][c].getHealth() + .0;
+                }
+                if(dropScore>1000){
+                    try {
+                        IceBlockCalc(iceBlocks[r - 1][c + 0]);
+                        // IceBlockCalc(iceBlocks[r][c+0]);
+                        IceBlockCalc(iceBlocks[r + 1][c + 0]);
+                        IceBlockCalc(iceBlocks[r - 1][c - 1]);
+                        IceBlockCalc(iceBlocks[r - 1][c + 1]);
+                        IceBlockCalc(iceBlocks[r + 1][c - 1]);
+                        IceBlockCalc(iceBlocks[r + 1][c + 1]);
+                        IceBlockCalc(iceBlocks[r][c + -1]);
+                        IceBlockCalc(iceBlocks[r][c + 1]);
+                    }
+                    catch(StackOverflowError e)
+                    {
+                        e.printStackTrace();
+                    }
+                }
 
             }
     }
-
 }
+
+
