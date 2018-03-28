@@ -19,6 +19,7 @@ class Bar extends Actor
     private PowerBar thisBar;
     private IceBlock drop=null;
     private boolean isRunning = true;
+    private GameWorld game;
     public Bar(PowerBar tempBar)
     {
         speedVar = 0;
@@ -33,16 +34,19 @@ class Bar extends Actor
         speedVar = 5;
     }
 
- public void moveBlock(IceBlock drop){
-        this.drop=drop;
+ public void moveBlock(IceBlock drop, GameWorld game){
+        this.drop=drop; this.game = game;
         if(isRunning)
             if(Mayflower.isKeyPressed(Keyboard.KEY_SPACE))
             {
                 setSpeedVar(0);
-                drop.setLocation(drop.getX(), drop.getY()+this.getPercent()/2);
+                drop.setHeight(drop.getHeight() - this.getPercent()/2);
+                //drop.setLocation(drop.getX(), drop.getY()+this.getPercent()/2);
+                game.IceBlockCalc();
                // drop.
                 //isRunning = false;
                 this.drop = null;
+
 
             }
 
@@ -75,7 +79,7 @@ class Bar extends Actor
             setRotation(180);
        move(speedVar);
        if(isRunning&&(drop!=null))
-           moveBlock(drop);
+           moveBlock(drop, game);
 
     }
 }

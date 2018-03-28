@@ -27,7 +27,7 @@ public class GameWorld extends World {
             for (int j = 0; j < 9; j++) {
                 y = i * 33 + 33 * j;
                 x = j * 55 - 55 * i;
-                IceBlock newOne = new IceBlock(Mayflower.getRandomNumber(100), 50);
+                IceBlock newOne = new IceBlock(50, 50);
                 iceBlocks[i][j] = newOne;
                 addObject(newOne, 700 + x, 50 + y);
 
@@ -61,7 +61,7 @@ public class GameWorld extends World {
             }
             highest.setImage("img/first_cube - Copy.png");
             puff.startMover();
-            puff.moveBlock(highest);
+            puff.moveBlock(highest,this);
 
 
 
@@ -112,7 +112,10 @@ public class GameWorld extends World {
                 int avg = add / 9;
 
                 det = det * avg;
-                System.out.println(det);
+
+                iceBlocks[r][c].setLocation(iceBlocks[r][c].getX(), iceBlocks[r][c].getY()+(50-iceBlocks[r][c].getHeight()));
+
+
 
 
             }
