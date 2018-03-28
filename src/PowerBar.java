@@ -40,9 +40,9 @@ class Bar extends Actor
             if(Mayflower.isKeyPressed(Keyboard.KEY_SPACE))
             {
                 setSpeedVar(0);
-                drop.setHeight(drop.getHeight() - this.getPercent()/2);
+                drop.setHeight(drop.getHeight() + this.getPercent()/2);
                 //drop.setLocation(drop.getX(), drop.getY()+this.getPercent()/2);
-                game.IceBlockCalc();
+                game.IceBlockCalc(drop);
                // drop.
                 //isRunning = false;
                 this.drop = null;

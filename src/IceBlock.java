@@ -37,7 +37,9 @@ public class IceBlock extends Actor {
          return health;
     }
     */
-
+public int getHealth() {
+    return health;
+}
     public int getHeight() {
         return height;
     }

@@ -4,9 +4,6 @@ import java.util.ArrayList;
 
 import mayflower.Mayflower;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-
 public class GameWorld extends World {
 
     public IceBlock[][] iceBlocks;
@@ -27,7 +24,7 @@ public class GameWorld extends World {
             for (int j = 0; j < 9; j++) {
                 y = i * 33 + 33 * j;
                 x = j * 55 - 55 * i;
-                IceBlock newOne = new IceBlock(50, 50);
+                IceBlock newOne = new IceBlock(0, 50);
                 iceBlocks[i][j] = newOne;
                 addObject(newOne, 700 + x, 50 + y);
 
@@ -73,9 +70,11 @@ public class GameWorld extends World {
 
     }
 
-    public void IceBlockCalc() {
+    public void IceBlockCalc(IceBlock calc) {
         for (int r = iceBlocks.length - 1; r > 0; r--)
             for (int c = iceBlocks[r].length - 1; c > 0; c--) {
+            if(iceBlocks[r][c]!= calc)
+                continue;
                 int iceBlockGet = iceBlocks[r][c].getHeight();
                 Integer[][] matrix = {
                         {0, 0, 0},
@@ -93,6 +92,7 @@ public class GameWorld extends World {
                     matrix[2][2] = iceBlocks[r + 1][c + 1].getHeight();
                     matrix[0][0] = iceBlocks[r - 1][c - 1].getHeight();
                     matrix[0][2] = iceBlocks[r - 1][c + 1].getHeight();
+
 
                 } catch (Exception e) {
                     // e.printStackTrace();
@@ -113,7 +113,8 @@ public class GameWorld extends World {
 
                 det = det * avg;
 
-                iceBlocks[r][c].setLocation(iceBlocks[r][c].getX(), iceBlocks[r][c].getY()+(50-iceBlocks[r][c].getHeight()));
+                System.out.println(avg);
+                iceBlocks[r][c].setLocation(iceBlocks[r][c].getX(), iceBlocks[r][c].getY()+(avg));
 
 
 
