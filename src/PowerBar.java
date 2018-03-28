@@ -41,6 +41,7 @@ class Bar extends Actor
             {
                 setSpeedVar(0);
                 drop.setHeight(drop.getHeight() + this.getPercent()/2);
+                drop.setHealth(drop.getHealth() - this.getPercent()/4);
                 //drop.setLocation(drop.getX(), drop.getY()+this.getPercent()/2);
                 game.IceBlockCalc(drop);
                // drop.

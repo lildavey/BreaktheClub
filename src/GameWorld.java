@@ -24,7 +24,7 @@ public class GameWorld extends World {
             for (int j = 0; j < 9; j++) {
                 y = i * 33 + 33 * j;
                 x = j * 55 - 55 * i;
-                IceBlock newOne = new IceBlock(0, 50);
+                IceBlock newOne = new IceBlock(0, 10);
                 iceBlocks[i][j] = newOne;
                 addObject(newOne, 700 + x, 50 + y);
 
@@ -107,7 +107,7 @@ public class GameWorld extends World {
                 int add = 0;
                 for (int i = matrix.length - 1; i > 0; i--)
                     for (int j = matrix[i].length - 1; j > 0; j--) {
-                        add += matrix[i][j];
+                        add += matrix[i][j] * (iceBlocks[i][j].getHealth())*.2;
                     }
                 int avg = add / 9;
 

@@ -17,8 +17,8 @@
           <file leaf-file-name="IceBlock.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/IceBlock.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="651">
-                  <caret line="31" column="8" lean-forward="true" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
+                <state relative-caret-position="515">
+                  <caret line="42" column="56" lean-forward="false" selection-start-line="42" selection-start-column="56" selection-end-line="42" selection-end-column="56" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -53,14 +53,14 @@
           <file leaf-file-name="PowerBar.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/PowerBar.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="231">
-                  <caret line="44" column="38" lean-forward="false" selection-start-line="44" selection-start-column="38" selection-end-line="44" selection-end-column="38" />
+                <state relative-caret-position="798">
+                  <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#1419#1420#0" expanded="true" />
-                    <element signature="e#1454#1455#0" expanded="true" />
-                    <element signature="e#1503#1504#0" expanded="true" />
-                    <element signature="e#1538#1539#0" expanded="true" />
+                    <element signature="e#1491#1492#0" expanded="true" />
+                    <element signature="e#1526#1527#0" expanded="true" />
+                    <element signature="e#1575#1576#0" expanded="true" />
+                    <element signature="e#1610#1611#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -83,8 +83,8 @@
           <file leaf-file-name="GameWorld.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/GameWorld.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="76" column="25" lean-forward="false" selection-start-line="76" selection-start-column="25" selection-end-line="76" selection-end-column="25" />
+                <state relative-caret-position="315">
+                  <caret line="109" column="78" lean-forward="false" selection-start-line="109" selection-start-column="78" selection-end-line="109" selection-end-column="78" />
                   <folding />
                 </state>
               </provider>
@@ -120,8 +120,8 @@
         <option value="$PROJECT_DIR$/src/Runner.java" />
         <option value="$PROJECT_DIR$/src/Data.java" />
         <option value="$PROJECT_DIR$/src/IceBlock.java" />
-        <option value="$PROJECT_DIR$/src/GameWorld.java" />
         <option value="$PROJECT_DIR$/src/PowerBar.java" />
+        <option value="$PROJECT_DIR$/src/GameWorld.java" />
       </list>
     </option>
   </component>
@@ -396,10 +396,10 @@
           <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1419#1420#0" expanded="true" />
-            <element signature="e#1454#1455#0" expanded="true" />
-            <element signature="e#1503#1504#0" expanded="true" />
-            <element signature="e#1538#1539#0" expanded="true" />
+            <element signature="e#1491#1492#0" expanded="true" />
+            <element signature="e#1526#1527#0" expanded="true" />
+            <element signature="e#1575#1576#0" expanded="true" />
+            <element signature="e#1610#1611#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -448,10 +448,10 @@
           <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1419#1420#0" expanded="true" />
-            <element signature="e#1454#1455#0" expanded="true" />
-            <element signature="e#1503#1504#0" expanded="true" />
-            <element signature="e#1538#1539#0" expanded="true" />
+            <element signature="e#1491#1492#0" expanded="true" />
+            <element signature="e#1526#1527#0" expanded="true" />
+            <element signature="e#1575#1576#0" expanded="true" />
+            <element signature="e#1610#1611#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -514,18 +514,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameWorld.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/IceBlock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="651">
-          <caret line="31" column="8" lean-forward="true" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
+        <state relative-caret-position="515">
+          <caret line="42" column="56" lean-forward="false" selection-start-line="42" selection-start-column="56" selection-end-line="42" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -534,15 +526,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PowerBar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="44" column="38" lean-forward="false" selection-start-line="44" selection-start-column="38" selection-end-line="44" selection-end-column="38" />
+        <state relative-caret-position="798">
+          <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1419#1420#0" expanded="true" />
-            <element signature="e#1454#1455#0" expanded="true" />
-            <element signature="e#1503#1504#0" expanded="true" />
-            <element signature="e#1538#1539#0" expanded="true" />
+            <element signature="e#1491#1492#0" expanded="true" />
+            <element signature="e#1526#1527#0" expanded="true" />
+            <element signature="e#1575#1576#0" expanded="true" />
+            <element signature="e#1610#1611#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameWorld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="109" column="78" lean-forward="false" selection-start-line="109" selection-start-column="78" selection-end-line="109" selection-end-column="78" />
+          <folding />
         </state>
       </provider>
     </entry>
