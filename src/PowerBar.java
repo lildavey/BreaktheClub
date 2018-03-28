@@ -1,4 +1,6 @@
 import mayflower.Actor;
+import mayflower.Keyboard;
+import mayflower.Mayflower;
 
 public class PowerBar extends Actor {
     public PowerBar()
@@ -15,7 +17,8 @@ class Bar extends Actor
 {
     private int speedVar, percent;
     private PowerBar thisBar;
-    private boolean isRunning;
+    private IceBlock drop=null;
+    private boolean isRunning = true;
     public Bar(PowerBar tempBar)
     {
         speedVar = 0;
@@ -25,11 +28,37 @@ class Bar extends Actor
         setImage("img/puff.png");
         setRotation(0);
     }
+    public void startMover() {
+
+        speedVar = 3;
+    }
+
+ public void moveBlock(IceBlock drop){
+        this.drop=drop;
+        if(isRunning)
+            if(Mayflower.isKeyPressed(Keyboard.KEY_SPACE))
+            {
+                setSpeedVar(0);
+                drop.setLocation(drop.getX(), drop.getY()+this.getPercent());
+               // drop.
+                //isRunning = false;
+                drop = null;
+
+            }
+
+ }
+
+
+
 
     public int getPercent()
     {
         int temp = getCenterX() - thisBar.getX(); percent = temp/4;
         return percent;
+    }
+    public int getSpeedVar()
+    {
+            return speedVar;
     }
 
     public void setSpeedVar(int newSpeed)
@@ -39,9 +68,14 @@ class Bar extends Actor
 
     @Override
     public void act() {
-        this.getPercent();
+        //this.getPercent();
+
         if(getX() == thisBar.getX()) setRotation(0);
-        else if(getX()+getImage().getWidth() == thisBar.getX()+thisBar.getImage().getWidth()) setRotation(180);
-        move(speedVar);
+        else if(getX()+getImage().getWidth() >= thisBar.getX()+thisBar.getImage().getWidth())
+            setRotation(180);
+       move(speedVar);
+       if(isRunning&&(drop!=null))
+           moveBlock(drop);
+
     }
 }

@@ -1,11 +1,8 @@
-import mayflower.Mayflower;
+import mayflower.*;
 
 import java.util.ArrayList;
 
-import mayflower.Actor;
-
 import mayflower.Mayflower;
-import mayflower.World;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -13,12 +10,16 @@ import java.util.ArrayList;
 public class GameWorld extends World {
 
     public IceBlock[][] iceBlocks;
+    public PowerBar narnar = new PowerBar();
+    public Bar puff = new Bar(narnar);
 
     public GameWorld() {
         setBackground("img/tileMap.png");
         iceBlocks = new IceBlock[9][9];
-        PowerBar narnar = new PowerBar();
+
+
         addObject(narnar, 0, 0);
+        addObject(puff, 0, 0);
 
         int x;
         int y;
@@ -34,23 +35,37 @@ public class GameWorld extends World {
             }
 
             iceBlocks[0][1].setImage("img/first_cube - Copy.png");
-        IceBlockCalc();
+        //IceBlockCalc();
     }
 
     @Override
     public void act() {
-        //if(Mayflower.mouseClicked(IceBlock.class))
+       // if(Mayflower.mouseClicked(IceBlock.class))
+
         ArrayList<IceBlock> temp = new ArrayList<>();
         for (IceBlock actor : getObjects(IceBlock.class)) {
-            if(Mayflower.mouseClicked(actor))temp.add(actor);
+            if(Mayflower.mouseClicked(actor)) {
+                temp.add(actor);
+
+            }
         }
 
         if(!temp.isEmpty()) {
             IceBlock highest = temp.get(0);
+
+
+           //System.out.println(i);
+
             for (IceBlock Icetemp : temp) {
                 if (Icetemp.getY() > highest.getY()) highest = Icetemp;
             }
             highest.setImage("img/first_cube - Copy.png");
+            puff.startMover();
+            puff.moveBlock(highest);
+
+
+
+
         }
 
 
