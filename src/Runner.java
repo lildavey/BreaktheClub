@@ -11,7 +11,7 @@ public class Runner extends Mayflower{
 
     public Runner()
     {
-        super("Client", 1424, 768);
+        super("Break the Ice", 1424, 768);
     }
 
 

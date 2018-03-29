@@ -11,7 +11,7 @@ public class GameWorld extends World {
     public Bar puff = new Bar(narnar);
 
     public GameWorld() {
-        setBackground("img/tileMap.png");
+        setBackground("img/bg.jpg");
         iceBlocks = new IceBlock[9][9];
 
 
