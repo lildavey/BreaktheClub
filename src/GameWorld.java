@@ -56,7 +56,7 @@ public class GameWorld extends World {
             for (IceBlock Icetemp : temp) {
                 if (Icetemp.getY() > highest.getY()) highest = Icetemp;
             }
-            highest.setImage("img/first_cube - Copy.png");
+            highest.setImage("img/Ice-pick.png");
             puff.startMover();
             puff.moveBlock(highest, this);
 

@@ -15,7 +15,8 @@ public class PowerBar extends Actor {
 }
 class Bar extends Actor
 {
-    private int speedVar, percent;
+    private int speedVar;
+    private Double percent;
     private PowerBar thisBar;
     private IceBlock drop=null;
     private boolean isRunning = true;
@@ -23,7 +24,7 @@ class Bar extends Actor
     public Bar(PowerBar tempBar)
     {
         speedVar = 0;
-        percent  = 0;
+        percent  = 0.0;
         thisBar = tempBar;
         //setLocation(thisBar.getX(), thisBar.getY()-8);
         setImage("img/puff.png");
@@ -40,9 +41,9 @@ class Bar extends Actor
             if(Mayflower.isKeyPressed(Keyboard.KEY_SPACE))
             {
                 setSpeedVar(0);
-                drop.setHeight(drop.getHeight() + this.getPercent()/2);
-                drop.setHealth(drop.getHealth() - this.getPercent()/4);
-                //drop.setLocation(drop.getX(), drop.getY()+this.getPercent()/2);
+                drop.setHeight(drop.getHeight() + (int)(100*this.getPercent()/2));
+                drop.setHealth(drop.getHealth() - (int)(this.getPercent()/4));
+                drop.setLocation(drop.getX(), drop.getY()+drop.getHeight());
                 game.IceBlockCalc(drop);
                // drop.
                 //isRunning = false;
@@ -56,9 +57,10 @@ class Bar extends Actor
 
 
 
-    public int getPercent()
+    public Double getPercent()
     {
-        int temp = getCenterX() - thisBar.getX(); percent = temp/4;
+        int temp = getCenterX() - thisBar.getX();
+        percent = (double)temp/400;
         return percent;
     }
     public int getSpeedVar()

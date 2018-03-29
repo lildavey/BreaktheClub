@@ -1,20 +1,17 @@
 import mayflower.Actor;
-
 import mayflower.Mayflower;
 import mayflower.MayflowerImage;
-import mayflower.World;
-
-import java.util.ArrayList;
-import java.util.List;
 
 
 public class IceBlock extends Actor {
-    private Mayflower mayflower;
     public int height, health;//, row, col;
+    private Mayflower mayflower;
     //public int[][] iceblocks;
+    private boolean isDead;
 
-    public IceBlock(int height, int health  ){
-        this.height = height; this.health = health;// this.row = row; this.col = col; //this.iceblocks = iceblocks;
+    public IceBlock(int height, int health) {
+        this.height = height;
+        this.health = health;// this.row = row; this.col = col; //this.iceblocks = iceblocks;
 
         MayflowerImage img = new MayflowerImage("img/Ice-temp.png");
 
@@ -23,28 +20,44 @@ public class IceBlock extends Actor {
 
     }
 
+    public void setDead(boolean c) {
+        isDead = c;
+    }
+
+    public boolean isDead()
+    {
+        return isDead;
+    }
+
     @Override
     public void act() {
-
+        while (getY() < 768 && isDead) {
+            setLocation(getX(), getY() + 4);
+        }
     }
 
 
-        
-
-/*
+    /*
+        public int getHealth() {
+            updateHealth();
+             return health;
+        }
+        */
     public int getHealth() {
-        updateHealth();
-         return health;
+        return health;
     }
-    */
-public int getHealth() {
-    return health;
-}
-    public void setHealth(int health){this.health=health;}
+
+    public void setHealth(int health) {
+        this.health = health;
+    }
+
     public int getHeight() {
         return height;
     }
-    public void setHeight(int height){this.height=height;}
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
 
 
 }
