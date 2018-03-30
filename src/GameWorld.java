@@ -97,30 +97,31 @@ public class GameWorld extends World {
                         {0, 0, 0}
                 };
                 try {
-                   int height = iceBlocks[1][1].getHeight();
-                    side[0][1] = Math.abs(matrix[0][1]- height); //top
+                   int height = matrix[1][1];
+                    side[0][1] = 100-Math.abs(matrix[0][1]- height); //top
                    if(r==0)
-                    side[0][1] = Math.abs(100 - height); //top
-                    side[2][1] =  Math.abs(matrix[2][1] - height);// bottom
-                    if(r==iceBlocks.length)
-                    side[2][1] =  Math.abs(100 - height);// bottom
-                    side[1][0] = Math.abs(matrix[1][0]- height); // left
+                    side[0][1] = 100-Math.abs(100 - height); //top
+                    side[2][1] =  100-Math.abs(matrix[2][1] - height);// bottom
+                    if(r==iceBlocks.length-1)
+                    side[2][1] =  100-Math.abs(100 - height);// bottom
+                    side[1][0] = 100-Math.abs(matrix[1][0]- height); // left
                     if(c==0)
-                    side[1][0] = Math.abs(100- height); // left
-                    side[1][2] = Math.abs(matrix[1][2]-height);// right
-                    if(c==iceBlocks[r].length)
-                    side[1][2] = Math.abs(100-height);// right
+                    side[1][0] = 100-Math.abs(100- height); // left
+                    side[1][2] = 100-Math.abs(matrix[1][2]-height);// right
+                    if(c==iceBlocks[r].length-1)
+                    side[1][2] = 100-Math.abs(100-height);// right
+                    if (iceBlocks[r][c] == calc)
+                    System.out.println("test" + side[0][1] + "," + Math.abs(matrix[0][1]- height) + "," + matrix[0][1]+ ","+ height);
 
 
 
                 } catch (Exception e) {
                     // e.printStackTrace();
                 }
-                if(side[0][1]+side[2][1] <5)
+                if(side[0][1]+side[2][1] <165 && side[1][0]+side[1][2]<165)
                     iceBlocks[r][c].setDead(true);
-                if(side[1][0]+side[1][2] <5)
-                    iceBlocks[r][c].setDead(true);
-                /*
+
+/*
                 if(iceBlocks[r][c].isDead()){
                     try {
                         IceBlockCalc(iceBlocks[r - 1][c + 0], rec-1);
@@ -137,8 +138,9 @@ public class GameWorld extends World {
                     {
                         e.printStackTrace();
                     }
-                }
-                */
+
+                }*/
+
 
 
             }
