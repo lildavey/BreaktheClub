@@ -11,7 +11,7 @@ public class GameWorld extends World {
     public Bar puff = new Bar(narnar);
 
     public GameWorld() {
-        setBackground("img/bg.jpg");
+        setBackground("img/tileMap.png");
         iceBlocks = new IceBlock[9][9];
 
 
@@ -68,65 +68,52 @@ public class GameWorld extends World {
     public void IceBlockCalc(IceBlock calc, int rec) {
         if (rec < 0)
             return;
-        for (int r = iceBlocks.length - 1; r > 0; r--)
-            for (int c = iceBlocks[r].length - 1; c > 0; c--) {
-                Integer[][] matrix = {
-                        {0, 0, 0},
-                        {0, 0, 0},
-                        {0, 0, 0}
-                };
-
-                try {
-                    matrix[1][1] = iceBlocks[r][c].getHeight();
-                    matrix[0][1] = iceBlocks[r - 1][c].getHeight(); //top
-                    matrix[2][1] = iceBlocks[r + 1][c].getHeight();// bottom
-                    matrix[1][0] = iceBlocks[r][c - 1].getHeight(); // left
-                    matrix[1][2] = iceBlocks[r][c + 1].getHeight();// right
-                    matrix[2][0] = iceBlocks[r + 1][c - 1].getHeight();
-                    matrix[2][2] = iceBlocks[r + 1][c + 1].getHeight();
-                    matrix[0][0] = iceBlocks[r - 1][c - 1].getHeight();
-                    matrix[0][2] = iceBlocks[r - 1][c + 1].getHeight();
-
-
-                } catch (Exception e) {
-                    // e.printStackTrace();
-                }
-                Integer[][] side = {
-                        {0, 0, 0},
-                        {0, 0, 0},
-                        {0, 0, 0}
-                };
-                try {
-                   int height = matrix[1][1];
-                    side[0][1] = 100-Math.abs(matrix[0][1]- height); //top
-                   if(r==0)
-                    side[0][1] = 100-Math.abs(100 - height); //top
-                    side[2][1] =  100-Math.abs(matrix[2][1] - height);// bottom
-                    if(r==iceBlocks.length-1)
-                    side[2][1] =  100-Math.abs(100 - height);// bottom
-                    side[1][0] = 100-Math.abs(matrix[1][0]- height); // left
-                    if(c==0)
-                    side[1][0] = 100-Math.abs(100- height); // left
-                    side[1][2] = 100-Math.abs(matrix[1][2]-height);// right
-                    if(c==iceBlocks[r].length-1)
-                    side[1][2] = 100-Math.abs(100-height);// right
-                    if (iceBlocks[r][c] == calc)
-                    System.out.println("test" + side[0][1] + "," + Math.abs(matrix[0][1]- height) + "," + matrix[0][1]+ ","+ height);
+        int countFall =0;
+        do {
+            countFall =0;
+            for (int r = iceBlocks.length - 1; r > 0; r--)
+                for (int c = iceBlocks[r].length - 1; c > 0; c--) {
+                    int top = 0;
+                    int bottom = 0;
+                    int left = 0;
+                    int right = 0;
+                    try {
+                        int height = iceBlocks[1][1].getHeight();
+                        top = Math.abs(iceBlocks[r - 1][c].getHeight() - height); //top
+                        if (r == 0)
+                            top = Math.abs(100 - height); //top
+                        bottom = Math.abs(iceBlocks[r + 1][c].getHeight() - height);// bottom
+                        if (r == iceBlocks.length)
+                            bottom = Math.abs(100 - height);// bottom
+                        left = Math.abs(iceBlocks[r][c - 1].getHeight() - height); // left
+                        if (c == 0)
+                            left = Math.abs(100 - height); // left
+                        right = Math.abs(iceBlocks[r][c + 1].getHeight() - height);// right
+                        if (c == iceBlocks[r].length)
+                            right = Math.abs(100 - height);// right
 
 
+                    } catch (Exception e) {
+                        // e.printStackTrace();
+                    }
 
-                } catch (Exception e) {
-                    // e.printStackTrace();
-                }
-                if(side[0][1]+side[2][1] <165 && side[1][0]+side[1][2]<165)
-                    iceBlocks[r][c].setDead(true);
+                    System.out.println("the thingy" + calc.getHeight());
+                    //System.out.println(r + ":" + c + ", "+[0][1] + "," + side[2][1] + "," + side[1][0] + "," + side[1][2]);
 
-/*
+                    if (top + bottom > 95) {
+                        iceBlocks[r][c].setDead(true);
+                        countFall++;
+                    }
+                    else if (left + right > 95) {
+                        iceBlocks[r][c].setDead(true);
+                    countFall++;
+                    }
+                /*
                 if(iceBlocks[r][c].isDead()){
                     try {
                         IceBlockCalc(iceBlocks[r - 1][c + 0], rec-1);
                         // IceBlockCalc(iceBlocks[r][c+0]);
-                        IceBlockCalc(iceBlocks[r + 1][c  + 0], rec-1);
+                        IceBlockCalc(iceBlocks[r + 1][c + 0], rec-1);
                         IceBlockCalc(iceBlocks[r - 1][c - 1], rec-1);
                         IceBlockCalc(iceBlocks[r - 1][c + 1], rec-1);
                         IceBlockCalc(iceBlocks[r + 1][c - 1], rec-1);
@@ -138,13 +125,22 @@ public class GameWorld extends World {
                     {
                         e.printStackTrace();
                     }
+                }
+                */
 
-                }*/
 
-
-
+                }
+        }
+        while(countFall>0);
+        for(int i = 0; i< iceBlocks.length; i++){
+            for(int j = 0; j< iceBlocks[i].length; j++) {
+                System.out.print(iceBlocks[i][j].getHeight() + " ");
             }
-    }
+            System.out.println("");
+        }
+        System.out.println("------------");
+            }
+
 
     public void IceBlockCalcold(IceBlock calc, int rec) {
         if(rec<0)

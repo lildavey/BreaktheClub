@@ -11,7 +11,10 @@ public class Runner extends Mayflower{
 
     public Runner()
     {
+
+
         super("Break the Club", 1424, 768);
+
     }
 
 
