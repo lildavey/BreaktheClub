@@ -126,7 +126,7 @@ public class GameWorld extends World {
                     try {
                         IceBlockCalc(iceBlocks[r - 1][c + 0], rec-1);
                         // IceBlockCalc(iceBlocks[r][c+0]);
-                        IceBlockCalc(iceBlocks[r + 1][c + 0], rec-1);
+                        IceBlockCalc(iceBlocks[r + 1][c  + 0], rec-1);
                         IceBlockCalc(iceBlocks[r - 1][c - 1], rec-1);
                         IceBlockCalc(iceBlocks[r - 1][c + 1], rec-1);
                         IceBlockCalc(iceBlocks[r + 1][c - 1], rec-1);
